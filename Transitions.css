@@ -1,0 +1,50 @@
+.circle {
+    width: 175px;
+    height: 175px;
+    background-color: magenta;
+    transition: border-radius 500ms, background-color 2s transform 2s;
+
+}
+
+.circle:hover {
+    background-color: aqua;
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.squares {
+    width: 100px;
+
+}
+
+section div {
+    width: 100px;
+    height: 100px;
+    background-color: darkslateblue;
+    margin: 2px;
+    transition: margin-left 2s ease-in, border-radius 2s, background-color 800ms, transform 2s;
+}
+
+section:hover div {
+    margin-left: 500px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    transform: scale(1.5);
+}
+
+.innertext:nth-of-type(2) {
+    transition-timing-function: ease-in;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
+}
+
+.trans {
+    padding: 20px;
+    background-color: #e9c46a;
+    margin: 50px auto;
+    border: 2px black solid;
+    width: 150px;
+    height: 40px;
+    transform: scale(1.2) translate(-45px) skew(30deg, 5deg);
+}

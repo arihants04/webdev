@@ -1,0 +1,93 @@
+* {
+    color: hsl(164, 68%, 78%);
+    background-color: darkslategray;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-size: 20px;
+    text-decoration: greenyellow underline dotted;
+}
+
+h1,
+h2 {
+    color: blanchedalmond;
+}
+
+#search {
+    color: #f2b3ff;
+}
+
+#login,
+#signup {
+    color: darkkhaki;
+}
+
+span {
+    color: #b0eadd;
+}
+
+.tag {
+    color: rgb(181, 110, 5);
+}
+
+footer a {
+    color: chartreuse;
+}
+
+h2+button {
+    font-size: 10px;
+}
+
+footer>a {
+    color: cyan;
+}
+
+input[type="password"] {
+    color: rgb(255, 0, 0);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button:hover {
+    color: aliceblue;
+}
+
+img#home {
+    float: right;
+    background-color: darkslategray;
+    width: 40px;
+}
+
+a:active {
+    color: mediumslateblue;
+}
+
+button:active {
+    color: mediumslateblue;
+}
+
+.post:nth-of-type(2n) {
+    background-color: cadetblue;
+}
+
+.post:nth-of-type(2n) {
+    background-color: cadetblue;
+}
+
+*::selection {
+    background-color: rgb(0, 255, 0);
+}
+
+#pop {
+    color: rgb(0, 132, 255);
+}
+
+.porcupine {
+    background-color: cadetblue;
+}

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+h1 {
+    color: #90c8d1;
+}
+
+section {
+    height: 900px;
+    width: 1500px;
+    margin: 0 auto;
+    background: center/cover url('https://media.istockphoto.com/photos/3d-rendering-futuristic-cyberpunk-city-background-picture-id1387784107?b=1&k=20&m=1387784107&s=170667a&w=0&h=JWdgiRz5q4ScXKqZ99g7EVzEXWVYNsJSY2a1Qv8evnQ=');
+}

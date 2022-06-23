@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Race Registration</h1>
+    <form action="" autocomplete="off">
+        <div>
+            <label for="first">First Name</label>
+            <input type="text" placeholder="First Name" id="first" name="first" required>
+            <label for="last">Last Name</label>
+            <input type="text" placeholder="Last Name" id="last" name="last" required> <br>
+        </div>
+        <br>
+        <div>Select a Race:</div>
+        <br>
+        <input type="radio" name="race" value="funrun5k" id="funrun5k">
+        <label for="funrun5k">Fun Run 5k</label><br>
+        <input type="radio" name="race" value="halfmarathon" id="Half Marathon">
+        <label for="Half Marathon">Half Marathon</label> <br>
+        <input type="radio" name="race" value="fullmarathon" id="Full Marathon">
+        <label for="Full Marathon">Full Marathon</label> <br>
+        </select>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        <label for="pass">Password</label>
+        <input type="password" name="password" id="pass" placeholder="password" required> <br>
+        <label for="age">Select an Age Group</label>
+        <select name="age" id="age">
+            <option value="" selected>click to select an age group</option>
+            <option value="under 18"> Under 18</option>
+            <option value="under 18">18-30</option>
+            <option value="under 18">30-50</option>
+            <option value="under 18">50+</option>
+        </select>
+        <br>
+        <button>Register!</button>
+    </form>
+    <h2>Google Search</h2>
+    <form action="http://www.google.com/search" autocomplete="off">
+        <input type="text" name="q" placeholder="Google Search">
+    </form>
+</body>
+
+</html>

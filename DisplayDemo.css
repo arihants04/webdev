@@ -1,0 +1,35 @@
+h1 {
+    background-color: goldenrod;
+    border: 2px solid green;
+    display: inline;
+    font-size: 40px;
+}
+
+span {
+    background-color: aqua;
+    border: 2px solid greenyellow;
+    display: block;
+    font-size: 2em;
+}
+
+div {
+    height: 150px;
+    width: 150px;
+    background-color: fuchsia;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 5px;
+    opacity: 10%;
+}
+
+button {
+    font-size: 1em;
+    padding: 0em 1em;
+    margin: 1em;
+    border-radius: .5em;
+    opacity: 100%;
+}
+
+ul {
+    font-size: 1.7rem;
+}

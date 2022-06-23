@@ -1,0 +1,17 @@
+nav {
+    font-family: Roboto;
+    font-weight: 700;
+    margin: calc(25%/12) 25% 0 calc(25%/6);
+    text-transform: uppercase;
+    border-bottom: 2px solid #bbda1e;
+    width: 25%;
+    padding: 2% 0 3% 0;
+    font-family: Raleway;
+    font-size: .95em;
+}
+
+img {
+    width: 25%;
+    margin: calc(25%/6);
+    background: cover;
+}
