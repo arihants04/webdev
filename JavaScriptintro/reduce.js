@@ -41,3 +41,19 @@ const person = {
 function greet(person, msg = 'Hey there', punc = '!') {
     console.log(`${msg} ${person}${punc}`)
 }
+
+const feline = { legs: 4, family: 'Felidae' };
+
+const canine = { isFurry: true, family: 'caninae' };
+
+function sum(...nums) {
+    return nums.reduce((total, curr) => total + curr)
+}
+
+function raceResults(gold, silver, bronze, ...everyoneElse) {
+    console.log(`Gold medal goes to ${gold}!`)
+    console.log(`Silver medal goes to ${silver}!`)
+    console.log(`Bronze medal goes to ${bronze}!`)
+    console.log(`Participation medal goes to ${everyoneElse}!`)
+
+}
