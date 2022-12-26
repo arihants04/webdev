@@ -57,3 +57,22 @@ function raceResults(gold, silver, bronze, ...everyoneElse) {
     console.log(`Participation medal goes to ${everyoneElse}!`)
 
 }
+
+const scores = [123123, 438754385, 27676214, 9999999999, 485858, 37458734];
+
+const [gold, silver, bronze, platinum, ...everyoneElse] = scores
+
+const randomObject = {
+    apple: "fruit",
+    dog: "animal",
+    car: "vehicle",
+    sunshine: "weather",
+    pencil: "writing instrument"
+};
+
+const { apple, dog, car, sunshine: sun, pencil = 'hello' } = randomObject
+
+function fullName({ firstName = 'adada', lastName = 'opsoapospa' }) {
+    return `${firstName} ${lastName}`
+
+}
