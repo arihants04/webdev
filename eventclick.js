@@ -46,3 +46,4 @@ form.addEventListener('submit', (e) => {
     list.appendChild(li);
     input2.value = '';
 });
+
