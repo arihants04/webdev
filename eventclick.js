@@ -46,4 +46,4 @@ form.addEventListener('submit', (e) => {
     list.appendChild(li);
     input2.value = '';
 });
-
+list.addEventListener('click', (e) => e.target.nodeName === 'LI' && e.target.remove());

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.46.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="score.css">
+    <title>Score Keeper</title>
+</head>
+
+<body>
+    <div id='box'>
+        <h4 class="text-s font-bold">Score Keeper</h4>
+        <h1 class="text-7xl ml-20 mt-5"></h1>
+        <p class="text-xl">Use the buttons below to keep score</p>
+        <select id='select' class="select select-info w-full max-w-xs">
+            <option id='option' selected='selected'>Playing to</option>
+        </select>
+        <br>
+        <button id='p1' class="rounded-full btn-lg btn-accent mt-5 mr-5 btn-disabled">+1 Player One</button>
+        <button id='p2' class="rounded-full btn-lg btn-primary mt-5 btn-disabled">+1 Player Two</button>
+        <br>
+        <button id='reset' class="rounded-full btn-lg btn-error mt-5 ml-32">Reset</button>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="score.js"></script>
+</body>
+
+</html>
