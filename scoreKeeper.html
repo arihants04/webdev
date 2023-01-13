@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.46.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <title>Score Keeper</title>
+</head>
+
+<body>
+    <div id='box'>
+        <h4 class="text-s font-bold">Score Keeper</h4>
+        <h1 class="text-7xl ml-20 mt-5"></h1>
+        <p class="text-xl">Use the buttons below to keep score</p>
+        <select id='select' class="select select-info w-full max-w-xs">
+            <option id='option' selected='selected'>Playing to</option>
+        </select>
+        <br>
+        <button id='p1' class="rounded-full btn-lg btn-accent mt-5 mr-5 btn-disabled">+1 Player One</button>
+        <button id='p2' class="rounded-full btn-lg btn-primary mt-5 btn-disabled">+1 Player Two</button>
+        <br>
+        <button id='reset' class="rounded-full btn-lg btn-error mt-5 ml-32">Reset</button>
+    </div>
+    <style>
+        #box {
+            width: 50%;
+            margin: auto;
+
+            margin-top: 20%;
+        }
+
+        p {
+            padding: 1em 0;
+        }
+    </style>
+    <script>
+        let select = document.querySelector('#select');
+        for (i = 1; i < 101; i++) {
+            let opt = document.createElement('option');
+            opt.value = i;
+            opt.innerText = i;
+            select.appendChild(opt);
+        }
+        let gameover = true;
+        let h1 = document.querySelector('h1');
+        let x = 0, y = 0;
+        h1.innerText = `${x} to ${y}`
+
+        let p1 = document.querySelector('#p1');
+        let p2 = document.querySelector('#p2');
+        let reset = document.querySelector('#reset')
+        const disable = () => {
+            p1.classList.toggle('btn-disabled');
+            p2.classList.toggle('btn-disabled');
+        }
+
+        p1.addEventListener('click', () => {
+            x++;
+            h1.innerText = `${x} to ${y}`;
+            gameRunning();
+        });
+        p2.addEventListener('click', () => {
+            y++;
+            h1.innerText = `${x} to ${y}`;
+            gameRunning();
+        });
+        let selection = document.querySelector('#select');
+        let playingTo = 101;
+        selection.addEventListener('change', () => {
+            playingTo = selection.selectedIndex;
+            disable()
+            gameRunning();
+            selection.setAttribute('disabled', '')
+            gameover = false;
+        })
+        let gameRunning = () => {
+            if (playingTo === x) {
+                h1.classList.toggle('text-accent');
+                disable()
+                selection.setAttribute('disabled', '');
+            }
+            else if (playingTo === y) {
+                h1.classList.toggle('text-primary');
+                disable()
+                selection.setAttribute('disabled', '');
+            }
+            if (playingTo !== 0) {
+                document.querySelector('#option').setAttribute('disabled', '')
+            }
+        }
+
+        reset.addEventListener('click', () => {
+            if (!gameover) {
+                if (x !== playingTo || y !== playingTo) {
+                    disable()
+                };
+                gameRunning();
+                x = 0; y = 0;
+                h1.innerText = `${x} to ${y}`;
+                selection.removeAttribute('disabled', '');
+                document.querySelector('#option').removeAttribute('disabled', '')
+                selection.selectedIndex = 0;
+                gameover = true;
+            }
+
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
