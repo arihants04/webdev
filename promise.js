@@ -40,11 +40,46 @@ const fakeRequestPromise = (url) => {
 // })
 
 
-const request = fakeRequestPromise('yelp.com/api/coffee');
-request
+fakeRequestPromise('yelp.com/api/coffee/page1')
     .then(() => {
         console.log('it worked')
+        fakeRequestPromise('yelp.com/coffee/page2')
+            .then(() => {
+                console.log('it worked again')
+                fakeRequestPromise('yelp.com/api.coffee/page3')
+                    .then(() => {
+                        console.log('it worked again again')
+                    })
+                    .catch(() => {
+                        console.log('ERROR!!!')
+                    })
+            })
+            .catch(() => {
+                console.log('ERROR!!')
+            })
     })
     .catch(() => {
         console.log('ERROR!')
+    })
+
+fakeRequestPromise('google.com/page1')
+    .then((resolve) => {
+        console.log(resolve)
+        return fakeRequestPromise('google.com/page2')
+    })
+    .then((resolve) => {
+        console.log(resolve)
+        return fakeRequestPromise('google.com/page3')
+    })
+    .then((resolve) => {
+        console.log(resolve)
+        return fakeRequestPromise('google.com/page4')
+    })
+    .then((resolve) => {
+        console.log(resolve)
+        return fakeRequestPromise('google.com/page5')
+    })
+    .catch((err) => {
+        console.log(err)
+        console.log('Error! A request failed')
     })
