@@ -89,7 +89,7 @@
 //         const rand = Math.random()
 //         setTimeout(() => {
 //             if (rand <= 0.7) {
-//                 resolve("DATA");
+//                 resolve("DATA from", url);
 //             }
 //             reject("REQUEST ERROR!");
 //         }, 1000)
