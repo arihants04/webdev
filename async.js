@@ -67,18 +67,25 @@ endOfRainbow();
 
 const fakeRequest = (url) => {
     return new Promise((resolve, reject) => {
-        const rand = Math.random()
+        const rand = Math.random();
         setTimeout(() => {
-            if (rand <= 0.7) {
+            if (rand <= 0.5) {
                 resolve(`DATA from ${url}`);
             }
-            reject("REQUEST ERROR!");
+            reject("Connection Timeout!");
         }, 1000)
 
     })
 }
 async function fakeRequest2() {
-    let data = await fakeRequest('gogle.com');
-    console.log(data)
+    try {
+        let data = await fakeRequest('gogle.com');
+        console.log(data)
+        let data2 = await fakeRequest('gogle.com/page2');
+        console.log(data2)
+    }
+    catch (e) {
+        console.log("Error: ", e)
+    }
 }
 fakeRequest2();
