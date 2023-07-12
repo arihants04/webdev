@@ -70,3 +70,24 @@ const wait = async () => {
     load2(2);
 }
 wait()
+
+let h1 = document.querySelector("h1");
+let h2 = document.createElement("h2")
+document.body.appendChild(h2);
+const getDadJoke = async () => {
+    try {
+        let config = { headers: { Accept: 'application/json' } }
+        let res = await axios.get("https://icanhazdadjoke.com/", config)
+        h2.innerText = res.data.joke;
+        console.log(res.data.joke);
+
+    }
+    catch (e) {
+        console.log("error", e);
+    }
+
+}
+console.log(h1.innerText);
+h1.addEventListener("click",
+    getDadJoke
+)
