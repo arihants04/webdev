@@ -20,3 +20,12 @@ function makeColor(r, g, b) {
     }
     return color;
 }
+
+function Color(r, g, b) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    console.log(this)
+}
+
+new Color(255, 40, 100);
