@@ -6,10 +6,14 @@ class Color {
         this.name = name;
     }
 
-    rgb() {
+    innerRGB() {
         let { r, g, b } = this;
-        return `rgb(${r}, ${g},${b})`;
+        return `(${r}, ${g},${b})`;
     }
+    rgb() {
+        return `rgb${this.innerRGB()}`;
+    }
+    rgba()
     hex() {
         let { r, g, b } = this;
         return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
