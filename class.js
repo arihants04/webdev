@@ -8,16 +8,19 @@ class Color {
 
     innerRGB() {
         let { r, g, b } = this;
-        return `(${r}, ${g},${b})`;
+        return `(${r},${g},${b}`;
     }
     rgb() {
-        return `rgb${this.innerRGB()}`;
+        return `rgb${this.innerRGB()})`;
     }
-    rgba()
+    rgba(a = 1.0) {
+        return `rgba${this.innerRGB()},${a})`
+    }
     hex() {
         let { r, g, b } = this;
         return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     }
 }
 
-const c1 = new Color(255, 67, 89, tomato)
+const c1 = new Color(255, 67, 89, 'tomato')
+document.body.style.backgroundColor = c1.rgba(.5)
