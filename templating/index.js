@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path")
 const app = express();
+const data = require("./data.json")
 
 app.set('views', path.join(__dirname, '/views'))
 
@@ -16,9 +17,10 @@ app.get('/rand', (req, res) => {
 })
 
 app.get('/r/:subreddit', (req, res) => {
-    let subreddit = req.params.subreddit
+    let subreddit = req.params.subreddit;
     //let {subreddit} = req.params
-    res.render("subreddit.ejs", { subreddit });
+    let subdata = data[subreddit];
+    res.render("subreddit.ejs", { ...subdata });
 })
 
 app.get('/cats', (req, res) => {
