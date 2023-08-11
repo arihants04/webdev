@@ -11,6 +11,14 @@
     <h1>
         Your random number between 1 and 10 is <%=num%>
     </h1>
+    <%if (num%2===0){ %>
+        <h2>EVEN!!</h2>
+        <%} else { %>
+            <h2>ODD!!</h2>
+            <%}%>
+                <h3> That number is:
+                    <%= num%2===0 ?"EVEN":"ODD" %>
+                </h3>
 </body>
 
 </html>
