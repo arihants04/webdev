@@ -21,6 +21,12 @@ app.get('/r/:subreddit', (req, res) => {
     res.render("subreddit.ejs", { subreddit });
 })
 
+app.get('/cats', (req, res) => {
+    const cats = ['blue', 'monty', 'tom ', 'willson', 'warner'];
+    res.render("cats.ejs", { cats });
+})
+
+
 app.listen(3000, () => {
     console.log('listening on port 3000!')
 })
