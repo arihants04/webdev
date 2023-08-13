@@ -4,8 +4,8 @@ const app = express();
 const data = require("./data.json")
 
 
-app.use(express.static(path.join(__dirname, "/static")))
 app.use(express.static(path.join(__dirname, "./node_modules/bootstrap/dist/")))
+app.use(express.static(path.join(__dirname, "/static")))
 
 app.set('views', path.join(__dirname, '/views'))
 

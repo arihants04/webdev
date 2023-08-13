@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('partials.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cats</title>
-    <link rel="stylesheet" href="app.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cats</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
 
-<body>
-    <h1>All The Cats</h1>
-    <ul>
-        <% for (cat of cats){ %>
-            <li>
-                <%=cat%>
-            </li>
-            <% } %>
+    <body>
+        <div class="container">
+            <h1>All The Cats</h1>
+            <ul>
+                <% for (cat of cats){ %>
+                    <li>
+                        <%=cat%>
+                    </li>
+                    <% } %>
 
-    </ul>
-</body>
+            </ul>
+            <%- include('footer.ejs') %>
+
+        </div>
+    </body>
 
 </html>

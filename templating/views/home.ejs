@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('partials.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="app.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
 
-<body>
-    <h1>The Home Page!</h1>
-    <p>
-        <%= 2+3+5 +' ' %>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quia veritatis nisi veniam error
+    <body>
+        <div class="container">
+            <h1>The Home Page!</h1>
+            <p>
+                <%= 2+3+5 +' ' %>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quia veritatis nisi veniam error
             corrupti quis
             tenetur quisquam consequuntur omnis sed enim molestiae, dolorum minus soluta. Vero atque odio eveniet.
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore quia veritatis nisi veniam error corrupti
@@ -36,5 +38,9 @@
             quis
             tenetur quisquam consequuntur omnis sed enim molestiae, dolorum minus soluta. Vero atque odio eveniet.
     </p>
-</body>
+        <%- include("footer.ejs") %>
+
+        </div>
+    </body>
+
 </html>
