@@ -49,7 +49,7 @@ export default function finance() {
             legend: {
               position: 'top',
               labels: {
-                color: 'white', // Set the label text color to white
+                color: 'white',
               },
             },
             title: {
@@ -96,7 +96,7 @@ export default function finance() {
             legend: {
               position: 'top',
               labels: {
-                color: 'white', // Set the label text color to white
+                color: 'white',
               },
             },
             title: {
