@@ -6,6 +6,13 @@
     <title>Comments</title>
 </head>
 <body>
-    
+    <h1>Comments</h1>
+    <ul>
+        <% for(let c of comments) {%>
+            <li><b><%=c.comment%></b> - <%=c.username %></li>
+            <%}%>
+    </ul>
+    <br>
+    <a href="/comments/new">Make your own comment!</a>
 </body>
 </html>
