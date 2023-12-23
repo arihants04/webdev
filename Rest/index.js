@@ -11,7 +11,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.set("view engine", "ejs");
 
-const comments = [
+let comments = [
   { username: "Todd", comment: "LOL", id: uuid() },
   { username: "Walt", comment: "So funny", id: uuid() },
   { username: "Nolan", comment: "Haha", id: uuid() },
@@ -50,6 +50,12 @@ app.get("/comments/:id/edit", (req, res) => {
   const { id } = req.params;
   const foundComment = comments.find((c) => c.id === id);
   res.render("comments/edit", { foundComment });
+});
+
+app.delete("/comments/:id", (req, res) => {
+  const { id } = req.params;
+  comments = comments.filter((c) => c.id !== id);
+  res.redirect("/comments");
 });
 
 app.get("/tacos", (req, res) => {
