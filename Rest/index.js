@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const uuid = require("uuid").v4;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -9,10 +10,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 const comments = [
-  { username: "Todd", comment: "LOL" },
-  { username: "Walt", comment: "So funny" },
-  { username: "Nolan", comment: "Haha" },
-  { username: "Mark", comment: "Hilarous!!" },
+  { username: "Todd", comment: "LOL", id: uuid() },
+  { username: "Walt", comment: "So funny", id: uuid() },
+  { username: "Nolan", comment: "Haha", id: uuid() },
+  { username: "Mark", comment: "Hilarous!!", id: uuid() },
 ];
 
 app.get("/comments", (req, res) => {
@@ -25,8 +26,14 @@ app.get("/comments/new", (req, res) => {
 
 app.post("/comments", (req, res) => {
   const { username, comment } = req.body;
-  comments.push({ username, comment });
+  comments.push({ username, comment, id: uuid() });
   res.redirect("/comments");
+});
+
+app.get("/comments/:id", (req, res) => {
+  const { id } = req.params;
+  const comment = comments.find((c) => c.id === id);
+  res.render("comments/show", { comment });
 });
 
 app.get("/tacos", (req, res) => {
