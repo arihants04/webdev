@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Video Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional styling for play button */
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 font-sans text-white">
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 h-screen p-5">
+            <h2 class="text-xl font-semibold mb-5 text-white border-b border-gray-600 pb-2">Course Contents</h2>
+            <div class="mb-4">
+                <h3 class="font-semibold text-lg mb-2 text-gray-400">Chapter 1</h3>
+                <ul class="list-none ml-4">
+                    <li class="mb-2 hover:text-blue-400 cursor-pointer">Tutorial 1</li>
+                    <li class="mb-2 hover:text-blue-400 cursor-pointer">Tutorial 2</li>
+                    <li class="mb-2 hover:text-blue-400 cursor-pointer">Tutorial 3</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h3 class="font-semibold text-lg mb-2 text-gray-400">Chapter 2</h3>
+                <ul class="list-none ml-4">
+                    <li class="mb-2 hover:text-blue-400 cursor-pointer">Tutorial 1</li>
+                    <li class="mb-2 hover:text-blue-400 cursor-pointer">Tutorial 2</li>
+                </ul>
+            </div>
+            <!-- Add more chapters as needed -->
+        </div>
+
+        <!-- Video Player Area -->
+        <div class="flex-1 p-10">
+            <h1 class="text-3xl font-bold mb-4">Course Title</h1>
+
+<h2 class="text-2xl font-semibold mb-3">Chapter 1: Tutorial 1</h2>
+<p class="mb-10">Description or additional content related to the tutorial can go here. Feel free to expand upon the
+    material or provide links to further resources.</p>
+
+            <div class="relative w-full h-96 bg-black mb-4 flex items-center justify-center">
+                <!-- Placeholder for Video Player with Play Button -->
+                <div class="play-button">▷</div>
+                <!-- Optionally, use an actual image for the placeholder -->
+                <!-- <img src="path/to/your/play-button-image.jpg" alt="Play Video" class="max-w-full h-auto"> -->
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>
